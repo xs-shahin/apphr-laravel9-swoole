@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:
+      args:
+        user: xpeedstudio
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: hr-lara9-app
+    container_name: hr-lara9-app
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
+    working_dir: /var/www/html/
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - yosuite-network
+    # command: composer require laravel/octane && php artisan octane:install && php artisan octane:start --server=swoole
+
+networks:
+  yosuite-network:
+    driver: bridge
