@@ -1,5 +1,5 @@
 # Accepted values: 8.2 - 8.1
-ARG PHP_VERSION=8.2
+ARG PHP_VERSION=8.0.2
 
 ARG COMPOSER_VERSION=latest
 
@@ -287,10 +287,10 @@ RUN if [ ${INSTALL_PG_CLIENT} = true ]; then \
 ###########################################
 # mongodb
 ###########################################
-# RUN pecl install mongodb && docker-php-ext-enable mongodb
+RUN pecl install mongodb-1.16.0 && docker-php-ext-enable mongodb
 #############################################
-# ENV COMPOSER_ALLOW_SUPERUSER=1
-# RUN composer require jenssegers/mongodb:dev-master
+ENV COMPOSER_ALLOW_SUPERUSER=1
+# RUN composer require jenssegers/mongodb
 # RUN composer update
 
 ###########################################

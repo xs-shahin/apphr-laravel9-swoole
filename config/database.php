@@ -97,12 +97,12 @@ return [
             'driver' => 'mongodb',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', 27017),
-            'database' => env('DB_DATABASE', 'homestead'),
-            'username' => env('DB_USERNAME', 'homestead'),
-            'password' => env('DB_PASSWORD', 'secret'),
+            'database' => env('DB_DATABASE', 'apphr_laravel9_swoole'),
+            'username' => env('DB_USERNAME', 'mongoadmin'),
+            'password' => env('DB_PASSWORD', 'mongoadmin'),
             'options' => [
                 'appname' => 'homestead',
-            ],
+            ]
         ],
 
     ],

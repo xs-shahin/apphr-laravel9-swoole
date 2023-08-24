@@ -11,7 +11,7 @@ services:
     image: hr-lara9-app
     container_name: hr-lara9-app
     ports:
-      - "8888:8888"
+      - "8888:9000"
     restart: unless-stopped
     working_dir: /var/www/html/
     volumes:
